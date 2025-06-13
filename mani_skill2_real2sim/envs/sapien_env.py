@@ -485,7 +485,7 @@ class BaseEnv(gym.Env):
         self.set_episode_rng(self._episode_seed)
         self.initialize_episode()
 
-        return self.get_obs(), {}
+        return self.get_obs(), {"episode_seed": self._episode_seed}
 
     def set_main_rng(self, seed):
         """Set the main random generator (e.g., to generate the seed for each episode)."""
